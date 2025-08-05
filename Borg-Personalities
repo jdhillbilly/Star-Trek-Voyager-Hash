@@ -1,0 +1,19 @@
+# Borg names to be used in place of Enterprise or Voyager cew members:
+
+export const borgPersonalities = [
+  { name: "Seven of Nine", role: "Tertiary Adjunct of Unimatrix 01" },
+  { name: "Locutus of Borg", role: "Borg Spokesperson (Picard)" },
+  { name: "The Borg Queen", role: "Borg Collective Leader" },
+  { name: "Hugh", role: "Third of Five (Liberated Borg)" },
+  { name: "One", role: "Borg Drone (Seven's Creation)" },
+  { name: "Icheb", role: "Second of Ten (Liberated Borg)" },
+  { name: "Crosis", role: "Borg Drone (Lore's Follower)" },
+  { name: "Riley Frazier", role: "Former Borg Cooperative Leader" },
+  { name: "Mezoti", role: "Borg Child (Liberated)" },
+  { name: "Azan", role: "Borg Child (Liberated)" },
+  { name: "Rebi", role: "Borg Child (Liberated)" },
+  { name: "Lore", role: "Android Borg Leader" },
+  { name: "Annika Hansen", role: "Seven of Nine (Pre-Borg Name)" },
+  { name: "Jean-Luc Picard", role: "Locutus (Pre-Assimilation)" },
+  { name: "Goval", role: "Borg Drone (Cooperative Member)" },
+]
