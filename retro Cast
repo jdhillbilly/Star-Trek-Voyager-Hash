@@ -1,0 +1,12 @@
+# Star Trek Original (retro)
+export const originalSeriesCrew = [
+  { name: "James T. Kirk", role: "Captain" },
+  { name: "Spock", role: "Science Officer/First Officer" },
+  { name: "Leonard McCoy", role: "Chief Medical Officer" },
+  { name: "Montgomery Scott", role: "Chief Engineer" },
+  { name: "Nyota Uhura", role: "Communications Officer" },
+  { name: "Hikaru Sulu", role: "Helmsman" },
+  { name: "Pavel Chekov", role: "Navigator" },
+  { name: "Christine Chapel", role: "Nurse" },
+  { name: "Janice Rand", role: "Yeoman" },
+]
