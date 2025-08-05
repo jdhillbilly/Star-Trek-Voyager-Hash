@@ -1,0 +1,66 @@
+#Add feature to convert hash output into binary representation.
+
+"use client"
+
+import { useState } from "react"
+import { Copy } from 'lucide-react'
+
+// Binary conversion function
+function hexToBinary(hex: string): string {
+  return hex
+    .split("")
+    .map((char) => Number.parseInt(char, 16).toString(2).padStart(4, "0"))
+    .join(" ")
+}
+
+export default function HashWithBinary() {
+  const [hash, setHash] = useState("a1b2c3d4") // Example hash
+  const [showBinary, setShowBinary] = useState(false)
+
+  return (
+    <div className="space-y-4">
+      {/* Hash display */}
+      <div className="flex items-center justify-between">
+        <div className="space-y-1 flex-1">
+          <p className="text-sm font-medium text-muted-foreground">
+            Hash value:
+          </p>
+          <p className="font-mono text-sm break-all">{hash}</p>
+        </div>
+        <button onClick={() => navigator.clipboard.writeText(hash)}>
+          <Copy className="h-4 w-4" />
+        </button>
+      </div>
+
+      {/* Binary toggle */}
+      <div className="flex items-center space-x-2">
+        <input
+          type="checkbox"
+          id="showBinary"
+          checked={showBinary}
+          onChange={(e) => setShowBinary(e.target.checked)}
+        />
+        <label htmlFor="showBinary">Show binary representation</label>
+      </div>
+
+      {/* Binary display */}
+      {showBinary && (
+        <div className="border-t pt-4">
+          <div className="flex items-start justify-between">
+            <div className="space-y-1 flex-1">
+              <p className="text-sm font-medium text-muted-foreground">
+                Binary representation:
+              </p>
+              <p className="font-mono text-xs break-all leading-relaxed text-muted-foreground">
+                {hexToBinary(hash)}
+              </p>
+            </div>
+            <button onClick={() => navigator.clipboard.writeText(hexToBinary(hash))}>
+              <Copy className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
